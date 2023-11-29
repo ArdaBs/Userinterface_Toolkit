@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Fluent.Ribbon" Version="10.0.4" />
+	<PackageReference Include="RibbonControlsLibrary" Version="4.0.0" />
+  </ItemGroup>
+
 </Project>

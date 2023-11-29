@@ -1,24 +1,89 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
+using Microsoft.Win32;
+using System.IO;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Ribbon_ToolbarDemo
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void NewFile_Click(object sender, RoutedEventArgs e)
+        {
+            // Logik zum Erstellen eines neuen Dokuments
+            MainTextBox.Clear();
+        }
+
+        private void OpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                MainTextBox.Text = File.ReadAllText(openFileDialog.FileName);
+            }
+        }
+
+        private void SaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, MainTextBox.Text);
+            }
+        }
+
+        // Weitere Funktionen wie PrintFile_Click, CloseFile_Click, etc.
+
+        private void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainTextBox.CanUndo)
+            {
+                MainTextBox.Undo();
+            }
+        }
+
+        private void Redo_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainTextBox.CanRedo)
+            {
+                MainTextBox.Redo();
+            }
+        }
+
+        private void Cut_Click(object sender, RoutedEventArgs e)
+        {
+            MainTextBox.Cut();
+        }
+
+        private void Copy_Click(object sender, RoutedEventArgs e)
+        {
+            MainTextBox.Copy();
+        }
+
+        private void Paste_Click(object sender, RoutedEventArgs e)
+        {
+            MainTextBox.Paste();
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void  ExitApplication_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Ribbon_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
     }
 }
+    
