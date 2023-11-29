@@ -3,10 +3,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Border_MenüleisteDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="LightGray">
     <Grid>
+        <StackPanel Margin="10">
+            <materialDesign:Card>
+                <Menu materialDesign:MenuAssist.TopLevelMenuItemHeight="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type materialDesign:Card}}, Path=ActualHeight}">
+                    <MenuItem Header="Datei">
+                        <MenuItem Header="Neue Liste" Click="NewTasks_MenuItem_Click"/>
+                        <MenuItem Header="Liste öffnen" Click="LoadTasks_MenuItem_Click"/>
+                        <MenuItem Header="Liste speichern" Click="SaveTasks_MenuItem_Click"/>
+                        <MenuItem Header="Schliessen" Click="Close_MenuItem_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Aufgaben">
+                        <MenuItem Header="Aufgabe hinzufügen" Click="AddTask_Click"/>
+                        <MenuItem Header="Aufgabe bearbeiten" Click="EditTask_Click"/>
+                        <MenuItem Header="Aufgabe löschen" Click="DeleteTask_Click"/>
+                    </MenuItem>
+
+                </Menu>
+            </materialDesign:Card>
+            <TextBox x:Name="TaskInput" Margin="5" Grid.Row="0" Background="AliceBlue"/>
+        </StackPanel>
+        
+        <Grid Margin="10,65,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Background="White" CornerRadius="5">
+            <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+                <ListBox x:Name="TasksListBox" />
+            </ScrollViewer>
+            </Border>
+        </Grid>
 
     </Grid>
 </Window>
