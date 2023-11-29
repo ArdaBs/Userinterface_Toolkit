@@ -20,6 +20,11 @@
                 Click="BtnPdfImport_Click">
                 <materialDesign:PackIcon Kind="TrayArrowUp" />
             </Button>
+            <TextBlock
+              x:Name="ImportLabel"
+              Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+              Text="Fügen Sie Ihre PDFs hinzu"
+              Visibility="Visible"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
@@ -67,6 +72,7 @@
             x:Name="MergePdf"
             Margin="10"
             ToolTip="Setzt die ausgewählten PDFs nach angegebener Reihenfolge zusammen"
+            Visibility="Hidden"
             Style="{StaticResource MaterialDesignPaperButton}" Click="MergePdf_Click">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <materialDesign:PackIcon Kind="FileMultiple" Margin="0,2.5,10,0"/>

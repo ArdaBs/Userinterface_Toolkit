@@ -57,6 +57,8 @@ namespace Progressbar_ToolTipDemo
                     if (!pdfListBox.Items.Cast<PdfFileInfo>().Any(p => p.FilePath == pdfFile.FilePath))
                     {
                         pdfListBox.Items.Add(pdfFile);
+                        MergePdf.Visibility = Visibility.Visible;
+                        ImportLabel.Visibility = Visibility.Hidden;
                     }
                     else
                     {
@@ -148,6 +150,7 @@ namespace Progressbar_ToolTipDemo
                     // ProgressBar reset and hide
                     MergeProgressBar.Value = 0;
                     MergeProgressBar.Visibility = Visibility.Hidden;
+                    MergePdf.Visibility = Visibility.Hidden;
                 }
                 catch (Exception ex)
                 {
