@@ -9,6 +9,7 @@
 - [Toolbar](#Toolbar)
 - [Menlüleiste](#Menlüleiste)
 - [Live Demo](#live-demo)
+- [Fazit](#Fazit)
 
 
 ## Progressbar
@@ -37,3 +38,6 @@ Man sieht Border in der Anwendung Visual Studio da man einen Rahmen sieht.
 Das Ribbon-Steuerelement ist eine Benutzeroberflächenkomponente, die dazu dient, eine Sammlung von Befehlen und Werkzeugen in einer ansprechenden, mehrspaltigen Leiste anzuzeigen.
 
 Man sieht das Ribbon benutzt wird bei den Microsoft Office anwendungen das bekannteste ist wahrscheinlich das Word beispiel weil man sieht oben bei der steuerung ein ribbon verwendet wird. Genauer gesagt oben wo Start oder Einfügen steht
+
+## Fazit
+Dieses Projekt war sehr spannend weil wir gesehen haben wie man eine benutzeroberfläche macht damit man es so einfach wie möglicht programmiert. Wir haben oft beim programmieren eselsbrücken gemacht zu applikatitionen wo diese Steuerelemente benutzen welches eine auch stolz gemacht hat. In diesem Projekt haben wir mit Pair programming gearbeitet was heisst das immer 2 leute zusammen gearbeitet haben.
