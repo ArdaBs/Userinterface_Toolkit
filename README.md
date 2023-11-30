@@ -18,6 +18,6 @@ Dieses Repository enthält eine Sammlung von Windows Presentation Foundation (WP
 - Ein Texteditor, der eine Ribbon-Toolbar für verbesserte Benutzerinteraktion verwendet.
 - Bietet Funktionen wie Öffnen, Speichern, Ausschneiden, Kopieren und Einfügen.
 
-### 4. ProgressBar und ToolTip-Demo
+### 3. ProgressBar und ToolTip-Demo
 - Veranschaulicht die Verwendung von ProgressBar zur Anzeige von Fortschrittsinformationen.
 - Nutzt ToolTip zur Bereitstellung von zusätzlichen Informationen für Benutzer.
